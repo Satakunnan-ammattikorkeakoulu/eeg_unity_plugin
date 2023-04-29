@@ -1,1 +1,1 @@
-# eeg_unity_plugin
+# EEG measurement plugin for Unity

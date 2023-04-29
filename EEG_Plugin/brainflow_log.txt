@@ -1,0 +1,67 @@
+[2023-04-28 14:39:02.421] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-28 14:39:02.421] [board_logger] [trace] Board object created 46
+[2023-04-28 14:39:02.421] [board_logger] [info] Use timeout for discovery: 5
+[2023-04-28 14:39:03.454] [board_logger] [trace] Scan started
+[2023-04-28 14:39:03.482] [board_logger] [trace] address d5:f4:84:54:10:d2
+[2023-04-28 14:39:03.484] [board_logger] [trace] identifier Ganglion-5859
+[2023-04-28 14:39:03.484] [board_logger] [info] Found GanglionNative device
+[2023-04-28 14:39:03.486] [board_logger] [trace] Scan stopped
+[2023-04-28 14:39:13.522] [board_logger] [error] Failed to connect to GanglionNative Device
+[2023-04-28 14:46:32.738] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-28 14:46:32.739] [board_logger] [trace] Board object created 46
+[2023-04-28 14:46:32.739] [board_logger] [info] Use timeout for discovery: 5
+[2023-04-28 14:46:33.776] [board_logger] [trace] Scan started
+[2023-04-28 14:46:33.801] [board_logger] [trace] address d5:f4:84:54:10:d2
+[2023-04-28 14:46:33.801] [board_logger] [trace] identifier Ganglion-5859
+[2023-04-28 14:46:33.802] [board_logger] [info] Found GanglionNative device
+[2023-04-28 14:46:33.804] [board_logger] [trace] Scan stopped
+[2023-04-28 14:46:43.846] [board_logger] [error] Failed to connect to GanglionNative Device
+[2023-04-28 15:25:50.831] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-28 15:25:50.831] [board_logger] [trace] Board object created -1
+[2023-04-28 15:31:37.841] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-28 15:31:37.842] [board_logger] [trace] Board object created -1
+[2023-04-28 15:33:04.339] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-28 15:33:04.339] [board_logger] [trace] Board object created -1
+[2023-04-28 15:33:37.985] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-28 15:33:37.985] [board_logger] [trace] Board object created -1
+[2023-04-28 15:35:15.334] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-28 15:35:15.334] [board_logger] [trace] Board object created -1
+[2023-04-28 15:37:17.607] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-28 15:37:17.607] [board_logger] [trace] Board object created -1
+[2023-04-28 15:47:29.171] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-28 15:47:29.171] [board_logger] [trace] Board object created 46
+[2023-04-28 15:47:29.171] [board_logger] [info] Use timeout for discovery: 5
+[2023-04-28 15:47:30.212] [board_logger] [trace] Scan started
+[2023-04-28 15:47:30.241] [board_logger] [trace] address d5:f4:84:54:10:d2
+[2023-04-28 15:47:30.241] [board_logger] [trace] identifier Ganglion-5859
+[2023-04-28 15:47:30.242] [board_logger] [info] Found GanglionNative device
+[2023-04-28 15:47:30.244] [board_logger] [trace] Scan stopped
+[2023-04-28 15:47:40.286] [board_logger] [error] Failed to connect to GanglionNative Device
+[2023-04-29 12:45:39.818] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-29 12:45:39.819] [board_logger] [trace] Board object created 46
+[2023-04-29 12:45:39.819] [board_logger] [info] Use timeout for discovery: 5
+[2023-04-29 12:45:39.819] [board_logger] [debug] use dyn lib: C:\Users\pentt\git_repos\ReactEEG\eeg_unity_plugin\EEG_Plugin\Assets\Packages\brainflow.5.7.0\lib\simpleble-c.dll
+[2023-04-29 12:45:40.916] [board_logger] [trace] Scan started
+[2023-04-29 12:45:41.005] [board_logger] [trace] address d5:f4:84:54:10:d2
+[2023-04-29 12:45:41.005] [board_logger] [trace] identifier Ganglion-5859
+[2023-04-29 12:45:41.005] [board_logger] [info] Found GanglionNative device
+[2023-04-29 12:45:41.007] [board_logger] [trace] Scan stopped
+[2023-04-29 12:45:51.069] [board_logger] [error] Failed to connect to GanglionNative Device
+[2023-04-29 12:53:28.390] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-29 12:53:28.390] [board_logger] [trace] Board object created 46
+[2023-04-29 12:53:28.390] [board_logger] [info] Use timeout for discovery: 5
+[2023-04-29 12:53:29.431] [board_logger] [trace] Scan started
+[2023-04-29 12:53:29.478] [board_logger] [trace] address d5:f4:84:54:10:d2
+[2023-04-29 12:53:29.478] [board_logger] [trace] identifier Ganglion-5859
+[2023-04-29 12:53:29.478] [board_logger] [info] Found GanglionNative device
+[2023-04-29 12:53:29.481] [board_logger] [trace] Scan stopped
+[2023-04-29 12:53:39.533] [board_logger] [error] Failed to connect to GanglionNative Device
+[2023-04-29 12:54:11.724] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-04-29 12:54:11.724] [board_logger] [trace] Board object created 46
+[2023-04-29 12:54:11.724] [board_logger] [info] Use timeout for discovery: 5
+[2023-04-29 12:54:12.756] [board_logger] [trace] Scan started
+[2023-04-29 12:54:12.775] [board_logger] [trace] address d5:f4:84:54:10:d2
+[2023-04-29 12:54:12.775] [board_logger] [trace] identifier Ganglion-5859
+[2023-04-29 12:54:12.775] [board_logger] [info] Found GanglionNative device
+[2023-04-29 12:54:12.778] [board_logger] [trace] Scan stopped
+[2023-04-29 12:54:22.813] [board_logger] [error] Failed to connect to GanglionNative Device

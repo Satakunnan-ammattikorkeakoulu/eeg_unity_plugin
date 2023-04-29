@@ -1,0 +1,2 @@
+[2023-04-28 15:40:32.670] [ml_logger] [trace] (Prepararing)Incoming json: {"classifier":0,"file":"","max_array_size":8192,"metric":1,"other_info":"","output_name":""}
+[2023-04-28 15:41:02.745] [ml_logger] [trace] (Release)Incoming json: {"classifier":0,"file":"","max_array_size":8192,"metric":1,"other_info":"","output_name":""}
