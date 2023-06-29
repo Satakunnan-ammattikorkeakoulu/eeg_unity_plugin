@@ -65,3 +65,5 @@
 [2023-04-29 12:54:12.775] [board_logger] [info] Found GanglionNative device
 [2023-04-29 12:54:12.778] [board_logger] [trace] Scan stopped
 [2023-04-29 12:54:22.813] [board_logger] [error] Failed to connect to GanglionNative Device
+[2023-06-29 12:42:43.979] [board_logger] [info] incoming json: {"file":"","file_anc":"","file_aux":"","ip_address":"","ip_address_anc":"","ip_address_aux":"","ip_port":0,"ip_port_anc":0,"ip_port_aux":0,"ip_protocol":0,"mac_address":"","master_board":-100,"other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2023-06-29 12:42:43.979] [board_logger] [trace] Board object created -1
