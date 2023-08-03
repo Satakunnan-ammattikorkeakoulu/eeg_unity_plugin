@@ -1,26 +1,36 @@
 using TMPro;
-using System;
+using brainflow;
 using UnityEngine;
+using Plugins.Restfulness;
 
 public class TextScript : MonoBehaviour
 {
     public TMP_Text canvasText;
-    public Connection connection;
+    // public TextMeshProUGUI canvasText;
+    public BoardIds boardId;
+
+    private Predictor _predictor;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        _predictor = new Predictor(boardId);
+        _predictor.OnRestfulnessScoreUpdated += OnRestfulnessScoreUpdated;
+        _predictor.StartSession();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DoExitGame()
     {
-        canvasText.text = "Restfulness score: " + connection.prediction;
+        _predictor.StopSession();
+        Debug.Log("Session released");
+        // Application.Quit();
     }
-    void doExitGame()
+
+    private void OnRestfulnessScoreUpdated(double score)
     {
-        Debug.Log("Exiting game...");
-        Destroy(connection);
-        Application.Quit();
+        // TODO: TÄMÄ PASKA EI PÄIVITÄ TEKSTIÄ RUUDULLE VAIKKA ARVO PÄIVITTYY
+        Debug.Log("Rest score: " + score);
+        Debug.Log("Testataas mitä canvasText sanoo: " + canvasText.text);
+        canvasText.text = "Restfulness score: " + score;
     }
 }
