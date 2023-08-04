@@ -48,10 +48,6 @@ namespace Plugins.Restfulness
         /// <exception cref="BrainFlowError">Thrown when there is an error with BrainFlow. Eg. Board was not initialized properly.</exception>
         public Predictor(BoardIds boardId, int predictionInterval = 2500)
         {
-            // TODO: To make the PLAYBACK_FILE_BOARD we need to do stuff here. If the boardId is PLAYBACK_FILE_BOARD the BrainFlowInputParams needs: 
-            //  - .file for the file path
-            //  - .master_board for the boardId of the board that was used to record the file
-
             if (predictionInterval < 500) throw new ArgumentException("Interval must be 500ms or greater.");
 
             var inputParams = new BrainFlowInputParams();
@@ -103,15 +99,12 @@ namespace Plugins.Restfulness
         }
 
         /// <summary>
-        /// TODO: This is not yet implemented for the Unity project
         /// Enable BrainFlow logging for debugging purposes. Files will be saved in the log folder in the current directory.
         /// Naming convention: bf_{yyyy-MM-dd_HH-mm-ss}.log and ml_{yyyy-MM-dd_HH-mm-ss}.log
         /// </summary>
         /// <exception cref="BrainFlowError">Thrown when there is an error with BrainFlow. Eg. Log file is locked for writing.</exception>
         public static void EnableDevLogging()
         {
-            Console.WriteLine();
-            Console.WriteLine("Enabling dev logging");
             var logPath = Path.Combine(Environment.CurrentDirectory, "log");
             var timeStamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
             if (!Directory.Exists(logPath)) Directory.CreateDirectory(logPath);
@@ -144,7 +137,6 @@ namespace Plugins.Restfulness
         /// <param name="e"></param>
         private void Predict(object sender, ElapsedEventArgs e)
         {
-            Tuple<double[], double[]> bands;
             double[,] data;
 
             if (_firstPrediction)
@@ -164,7 +156,7 @@ namespace Plugins.Restfulness
             // Band stop: 48 - 52 Hz, Butterworth, order 4
             // Band stop 58 - 62 Hz, Butterworth, order 4
             // Band pass: 2 - 45 Hz, Butterworth, order 4
-            bands = DataFilter.get_avg_band_powers(data, _eegChannels, _samplingRate, true);
+            var bands = DataFilter.get_avg_band_powers(data, _eegChannels, _samplingRate, true);
 
             var featureVector = bands.Item1;
             // The result type is double[] but it contains only one element.
