@@ -164,7 +164,6 @@ namespace Plugins.Restfulness
             // Band stop: 48 - 52 Hz, Butterworth, order 4
             // Band stop 58 - 62 Hz, Butterworth, order 4
             // Band pass: 2 - 45 Hz, Butterworth, order 4
-            // bands = DataFilter.get_avg_band_powers(data, _eegChannels, _samplingRate, true);
             bands = DataFilter.get_avg_band_powers(data, _eegChannels, _samplingRate, true);
 
             var featureVector = bands.Item1;
