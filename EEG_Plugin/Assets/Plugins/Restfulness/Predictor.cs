@@ -38,7 +38,7 @@ namespace Plugins.Restfulness
                 OnRestfulnessScoreUpdated?.Invoke(_restfulnessScore);
             }
         }
-        
+
         /// <summary>
         /// Initializes the predictor with the provided boardId and prediction interval.
         /// </summary>
@@ -90,7 +90,7 @@ namespace Plugins.Restfulness
             _timer.Elapsed += Predict;
             _timer.Start();
         }
-        
+
         /// <summary>
         /// Stops the stream and releases the BrainFlow and ML sessions.
         /// </summary>
@@ -144,41 +144,34 @@ namespace Plugins.Restfulness
         /// <param name="e"></param>
         private void Predict(object sender, ElapsedEventArgs e)
         {
-            // TODO: See if you could make this cleaner
             Tuple<double[], double[]> bands;
+            double[,] data;
+
             if (_firstPrediction)
             {
                 _firstPrediction = false;
-                var data = _boardShim.get_current_board_data(_dataCount);
-
-                // FilterData(ref data); // This is disabled for now. Once we get to refactoring the Filtering logic we can enable this.
-
-                // Calculate avg and stddev (in that order) of band powers across all channels. Bands are 1-4, 4-8, 8-13, 13-30, 30-50 Hz.
-                // The last parameter applies the following filters in order:
-                // Band stop: 48 - 52 Hz, Butterworth, order 4
-                // Band stop 58 - 62 Hz, Butterworth, order 4
-                // Band pass: 2 - 45 Hz, Butterworth, order 4
-                bands = DataFilter.get_avg_band_powers(data, _eegChannels, _samplingRate, true);
+                data = _boardShim.get_current_board_data(_dataCount);
             }
             else
             {
                 var firstData = _boardShim.get_board_data(_dataCount);
                 var secondData = _boardShim.get_current_board_data(_dataCount);
-                var data = ConcatenateData(firstData, secondData);
-
-                // Calculate avg and stddev (in that order) of band powers across all channels. Bands are 1-4, 4-8, 8-13, 13-30, 30-50 Hz.
-                // The last parameter applies the following filters in order:
-                // Band stop: 48 - 52 Hz, Butterworth, order 4
-                // Band stop 58 - 62 Hz, Butterworth, order 4
-                // Band pass: 2 - 45 Hz, Butterworth, order 4
-                bands = DataFilter.get_avg_band_powers(data, _eegChannels, _samplingRate, true);
+                data = ConcatenateData(firstData, secondData);
             }
+
+            // Calculate avg and stddev (in that order) of band powers across all channels. Bands are 1-4, 4-8, 8-13, 13-30, 30-50 Hz.
+            // The last parameter applies the following filters in order:
+            // Band stop: 48 - 52 Hz, Butterworth, order 4
+            // Band stop 58 - 62 Hz, Butterworth, order 4
+            // Band pass: 2 - 45 Hz, Butterworth, order 4
+            // bands = DataFilter.get_avg_band_powers(data, _eegChannels, _samplingRate, true);
+            bands = DataFilter.get_avg_band_powers(data, _eegChannels, _samplingRate, true);
 
             var featureVector = bands.Item1;
             // The result type is double[] but it contains only one element.
             RestfulnessScore = _model.predict(featureVector)[0];
         }
-        
+
         /// <summary>
         /// Helper function to concatenate the two halves of the EEG data.
         /// </summary>
