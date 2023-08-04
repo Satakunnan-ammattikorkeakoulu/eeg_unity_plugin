@@ -27,6 +27,7 @@ namespace Plugins.Restfulness
 
         /// <value>
         /// Score that indicates how restful the user is. The higher the score, the more restful the user is.
+        /// The value is provided through the OnRestfulnessScoreUpdated event, but it is also possible to create a different way to get the score via the public getter.
         /// Value is between [0, 1].
         /// </value>
         public double RestfulnessScore
@@ -44,7 +45,7 @@ namespace Plugins.Restfulness
         /// </summary>
         /// <param name="boardId">Board ID of the board.</param>
         /// <param name="predictionInterval">Optional: The interval in milliseconds at which the predictor will make a predictions. Default is 2500</param>
-        /// <exception cref="ArgumentException">Thrown if the <paramref name="predictionInterval"></paramref> is less than 500. Any less than 500ms is not enough data to make a prediction.</exception>
+        /// <exception cref="ArgumentException">Thrown if the <paramref name="predictionInterval"/> is less than 500. Any less than 500ms is not enough data to make a prediction.</exception>
         /// <exception cref="BrainFlowError">Thrown when there is an error with BrainFlow. Eg. Board was not initialized properly.</exception>
         public Predictor(BoardIds boardId, int predictionInterval = 2500)
         {
